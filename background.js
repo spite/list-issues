@@ -20,7 +20,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 		return new Promise( function( resolve, reject ) {
 
-			var re = /<a class=".*\n?name.*\n?" href="\/([\S]*)"/gmi;
+			var re = /<meta name="user-login" content="([\S]*)">/gmi;
 			var m;
 
 			while ((m = re.exec(str)) !== null) {
